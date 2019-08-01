@@ -80,6 +80,11 @@ namespace AjaxCRUDaspNetMVC.Models
             return listaLengProg;
         }
 
+        public static LenguajeProgramacion ObtenerElemento(int id)
+        {
+            return listaLengProg.Find(l => l.Id == id);
+        }
+
         public static void AgregarElemento(LenguajeProgramacion lengProg)
         {
             lengProg.Id = random.Next(1, 100);

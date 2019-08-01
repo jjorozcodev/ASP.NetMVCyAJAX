@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
-using AjaxCRUDaspNetMVC.Models;
+﻿using System.Web.Mvc;
 
 namespace AjaxCRUDaspNetMVC.Controllers
 {
@@ -11,17 +9,13 @@ namespace AjaxCRUDaspNetMVC.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Crear()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Editar()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
