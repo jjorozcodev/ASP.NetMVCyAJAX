@@ -1,6 +1,6 @@
-﻿<a href="/Home/Crear" class="btn btn-outline-success m-3">Nuevo</a>
+﻿<a href="/Home/Crear" class="btn btn-success m-3">Nuevo</a>
 
-<table class="table m-3">
+<table id="miTabla" class="table m-3">
     <thead>
         <tr>
             <th scope="col">ID</th>
@@ -9,10 +9,10 @@
             <th scope="col">Año de Aparición</th>
             <th scope="col">Tipado</th>
             <th scope="col">Extensión</th>
+            <th scope="col">Acciones</th>
         </tr>
     </thead>
-    <tbody id="datosTabla">
-    </tbody>
+    <tbody id="datosTabla"></tbody>
 </table>
 
 @section scripts
@@ -20,6 +20,7 @@
     <script type="text/javascript">
         $(function () {
             CargarLista();
+            
         });
     </script>
 }

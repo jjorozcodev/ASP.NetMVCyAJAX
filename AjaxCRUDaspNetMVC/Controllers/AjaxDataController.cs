@@ -15,33 +15,33 @@ namespace AjaxCRUDaspNetMVC.Controllers
         [HttpGet]
         public JsonResult Listar()
         {
-            List<LenguajeProgramacion> Data = GestorDatos.ObtenerLista();
-            return Json(Data, JsonRequestBehavior.AllowGet);
+            List<LenguajeProgramacion> data = GestorDatos.ObtenerLista();
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]
-        public JsonResult Obtener(int Id)
+        public JsonResult Obtener(int id)
         {
-            LenguajeProgramacion Obj = GestorDatos.ObtenerElemento(Id);
+            LenguajeProgramacion Obj = GestorDatos.ObtenerElemento(id);
             return Json(Obj, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]
-        public void Crear(LenguajeProgramacion lp)
+        public void Crear(LenguajeProgramacion obj)
         {
-            GestorDatos.AgregarElemento(lp);
+            GestorDatos.AgregarElemento(obj);
         }
 
         [HttpPost]
-        public void Editar(LenguajeProgramacion lp)
+        public void Editar(LenguajeProgramacion obj)
         {
-            GestorDatos.AgregarElemento(lp);
+            GestorDatos.EditarElemento(obj);
         }
 
         [HttpPost]
-        public void Borrar(int Id)
+        public void Borrar(int id)
         {
-            GestorDatos.BorrarElemento(Id);
+            GestorDatos.BorrarElemento(id);
         }
 
     }
