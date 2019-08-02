@@ -52,7 +52,7 @@ namespace AjaxCRUDaspNetMVC.Models
                 Nombre = "Javascript",
                 Tipado = "Débil",
                 Aparicion = 1995,
-                Extension = ".py",
+                Extension = ".js",
                 Creador = "Brendan Eich"
             });
             listaLengProg.Add(new LenguajeProgramacion()

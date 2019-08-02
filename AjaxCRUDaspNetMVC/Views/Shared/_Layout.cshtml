@@ -1,22 +1,39 @@
 ﻿<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/Content/css/myStyle.css">
-    
-    <title>ASP.Net MVC y AJAX / JQuery y Bootstrap</title>
-</head>
-<body>
+        <!-- CSS -->
+        <link href="../Content/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../Content/css/myStyle.css" rel="stylesheet">
 
-    @RenderBody()
+        <title>ASP.Net MVC y AJAX / JQuery y Bootstrap</title>
+    </head>
+    <body>
+        <nav id="menu" class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand">Navbar</a>
+            <form class="form-inline">
+                <span id="usuarioActivo" class="align-middle">¡Bienvenido!</span>
+                <a class="ml-2 btn btn-outline-light">Salir</a>
+            </form>
+        </nav>
+        <div class="container">
+            @RenderBody()
+        </div>
 
-    <!--Scripts -->
-    <script src="~/Content/js/jquery-3.3.1.min.js"></script>
-    <script src="~/Content/js/bootstrap.min.js"></script>
-    <script src="~/Content/js/myScript.js"></script>
-</body>
+        <!--Scripts -->
+        <script src="../Content/js/jquery-3.3.1.min.js"></script>
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/myScript.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                UsuarioActual();
+            });
+        </script>
+
+        @RenderSection("scripts", required: false)
+
+    </body>
 </html>
